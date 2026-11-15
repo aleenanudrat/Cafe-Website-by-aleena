@@ -1,0 +1,54 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f3ef;color:#2b211d;line-height:1.6;transition:.3s}
+.container{width:90%;max-width:1100px;margin:auto}
+header{background:#5c3d2e;color:#fff;padding:24px 0;text-align:center}
+header h1{margin:0;font-size:36px}
+#status{font-weight:bold}
+#theme-button{padding:10px 18px;border:0;border-radius:6px;cursor:pointer;font-weight:bold}
+nav{display:flex;justify-content:center;gap:30px;margin-top:18px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:#f0c9a8}
+section{padding:70px 0}
+section:nth-child(even){background:#fff}
+h2{font-size:38px;color:#5c3d2e;margin:5px 0 15px}
+.eyebrow{color:#a05a2c;font-weight:bold;letter-spacing:2px;margin-bottom:4px}
+.hero{background:#f7f3ef!important}
+.hero-grid{min-height:520px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+.hero h2{font-size:58px}
+.hero p:not(.eyebrow){font-size:18px}
+.hero img{width:100%;border-radius:20px;box-shadow:0 12px 30px #0002}
+.btn,.submit{display:inline-block;background:#5c3d2e;color:#fff;border:0;border-radius:6px;padding:12px 22px;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover,.submit:hover{background:#3f291f}
+.filters{margin:28px 0 20px}
+.filter{border:0;border-radius:6px;padding:10px 20px;margin-right:8px;cursor:pointer;background:#ddd}
+.filter.active,.filter:hover{background:#5c3d2e;color:#fff}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
+th{background:#5c3d2e;color:#fff;padding:14px;text-align:left}
+td{padding:14px;border-bottom:1px solid #ddd}
+tbody tr:hover{background:#f1e6df}
+.total{margin-top:20px;background:#5c3d2e;color:#fff;padding:16px;border-radius:8px;font-size:20px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.why{background:#f7f3ef;padding:25px;border-radius:10px}
+.hidden{display:none}
+form{max-width:600px;background:#fff;padding:30px;border-radius:12px;box-shadow:0 5px 20px #00000014}
+form>label{display:block;font-weight:bold;margin-top:15px}
+input[type=text],input[type=email],input[type=number],textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #ccc;border-radius:6px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+.choices{display:flex;gap:25px;margin-top:8px}
+.choices label,.check{font-weight:normal}
+.check{display:block;margin-top:18px}
+.submit{width:100%;margin-top:20px}
+#form-message,#discount-message{font-weight:bold}
+footer{background:#5c3d2e;color:#fff;text-align:center;padding:20px}
+body.dark-mode{background:#181818;color:#eee}
+body.dark-mode section,body.dark-mode form,body.dark-mode table{background:#252525}
+body.dark-mode .hero{background:#181818!important}
+body.dark-mode h2{color:#e0aa82}
+body.dark-mode .why{background:#303030}
+body.dark-mode td{border-color:#444}
+body.dark-mode tbody tr:hover{background:#333}
+body.dark-mode input,body.dark-mode textarea{background:#333;color:#fff;border-color:#555}
+@media(max-width:768px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero{text-align:center}.hero h2{font-size:44px}.hero img{max-width:600px;margin:auto}}
+@media(max-width:500px){.container{width:92%}nav{gap:15px}.choices{flex-direction:column;gap:8px}h2{font-size:30px}}

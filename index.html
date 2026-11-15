@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cafe</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>☕ My Cafe</h1>
+    <p id="status">Checking status...</p>
+    <button id="theme-button">🌙 Dark Mode</button>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">WELCOME TO</p>
+        <h2>My Cafe</h2>
+        <p>Enjoy fresh coffee, delicious food and a peaceful environment with your friends and family.</p>
+        <a class="btn" href="#menu">View Our Menu</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Coffee">
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="container">
+      <p class="eyebrow">OUR MENU</p>
+      <h2>Fresh & Delicious</h2>
+      <p>Choose your favorite coffee and pastries.</p>
+
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Drinks">Drinks</button>
+        <button class="filter" data-category="Pastries">Pastries</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="menu-table">
+          <thead>
+            <tr><th>Item</th><th>Category</th><th>Price</th><th>Order</th></tr>
+          </thead>
+          <tbody>
+            <tr data-category="Drinks"><td>☕ Espresso</td><td>Drinks</td><td>$3</td><td><input class="menu-item" type="checkbox" data-price="3"></td></tr>
+            <tr data-category="Drinks"><td>☕ Coffee</td><td>Drinks</td><td>$5</td><td><input class="menu-item" type="checkbox" data-price="5"></td></tr>
+            <tr data-category="Pastries"><td>🥐 Croissant</td><td>Pastries</td><td>$4</td><td><input class="menu-item" type="checkbox" data-price="4"></td></tr>
+            <tr data-category="Pastries"><td>🍰 Chocolate Cake</td><td>Pastries</td><td>$6</td><td><input class="menu-item" type="checkbox" data-price="6"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="total">Total: <strong id="total">$0</strong></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <p class="eyebrow">ABOUT US</p>
+      <h2>We Love Good Coffee</h2>
+      <div class="about-grid">
+        <div>
+          <p>Our cafe provides fresh food and drinks in a comfortable environment.</p>
+          <p id="extra-text" class="hidden">We provide quality coffee, delicious pastries and friendly service for our customers. Our goal is to make every visit comfortable and enjoyable.</p>
+          <button id="read-more" class="btn">Read More</button>
+        </div>
+        <div class="why">
+          <h3>Why Choose Us?</h3>
+          <ol type="A">
+            <li>Fresh Food</li>
+            <li>Good Quality</li>
+            <li>Friendly Service</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <p class="eyebrow">CONTACT US</p>
+      <h2>Contact / Order Form</h2>
+
+      <form id="contact-form">
+        <label>Name</label>
+        <input id="username" type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input id="email" type="email" placeholder="Enter your email">
+
+        <label>Birth Year</label>
+        <input id="birth-year" type="number" placeholder="Example: 2002" min="1900" max="2026">
+        <p id="discount-message"></p>
+
+        <label>Order Type</label>
+        <div class="choices">
+          <label><input type="radio" name="order" value="Dine In"> Dine In</label>
+          <label><input type="radio" name="order" value="Takeaway"> Takeaway</label>
+        </div>
+
+        <label class="check"><input type="checkbox" id="offers"> I want to receive special offers.</label>
+
+        <label>Special Request</label>
+        <textarea id="special-notes" maxlength="100" placeholder="Write your special request..."></textarea>
+        <small id="character-count">100 characters remaining</small>
+
+        <button class="submit" type="submit">Submit Order</button>
+        <p id="form-message"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 My Cafe. All Rights Reserved.</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
